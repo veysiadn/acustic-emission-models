@@ -47,7 +47,11 @@ Sketch uses `177472 bytes (18%)` of program storage space. Maximum is 983040 byt
 Global variables use `63176 bytes (24%)` of dynamic memory, leaving 198968 bytes for local variables. Maximum is 262144 bytes.
 
 tensor_arena_size = `8868 bytes`
-Average inference time: `993.27 us` (10k samples)
+Average inference time : `991.57 microseconds` (10k samples)
+STD of inference time  : `18.65 microseconds`
+Max inference time     : `1037 microseconds`
+Min inference time     : `935 microseconds`
+
 ========================================================================================================================
 **Dense model `Optimized` deployment Arduino Nano BLE 33**
 
@@ -60,7 +64,11 @@ Sketch uses `169328 bytes (17%)` of program storage space. Maximum is 983040 byt
 Global variables use `60440 bytes (23%)` of dynamic memory, leaving 201704 bytes for local variables. Maximum is 262144 bytes.
 ### REMARK: Optimized model adds to more layers, namely Quantize and Dequantize layers for that reasons inference time is slowed down by 2.8 times.
 tensor_arena_size = `6040 bytes`
-Average inference time: `2801.10 us` (10k samples)
+Average inference time : `2799.92 microseconds` (10k samples)
+STD of inference time  : `22.57 microseconds`
+Max inference time     : `3518 microseconds`
+Min inference time     : `2697 microseconds`
+
 ========================================================================================================================
 
 ========================================================================================================================

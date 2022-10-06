@@ -1,80 +1,90 @@
-### Model: "custom_2D_conv_model"
+Model: "modified_conv_model_paper_paper_2D"
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
-
  Reshape (Reshape)           (None, 1000, 1, 1)        0         
                                                                  
- conv2d_14 (Conv2D)          (None, 1000, 1, 8)        208       
+ conv2d_12 (Conv2D)          (None, 1000, 1, 32)       1600      
                                                                  
- max_pooling2d_18 (MaxPoolin  (None, 500, 1, 8)        0         
+ max_pooling2d_15 (MaxPoolin  (None, 125, 1, 32)       0         
  g2D)                                                            
                                                                  
- flatten_19 (Flatten)        (None, 4000)              0         
+ conv2d_13 (Conv2D)          (None, 125, 1, 48)        38448     
                                                                  
- output (Dense)              (None, 3)                 12003     
+ max_pooling2d_16 (MaxPoolin  (None, 32, 1, 48)        0         
+ g2D)                                                            
+                                                                 
+ max_pooling2d_17 (MaxPoolin  (None, 8, 1, 48)         0         
+ g2D)                                                            
+                                                                 
+ flatten_18 (Flatten)        (None, 384)               0         
+                                                                 
+ dense_46 (Dense)            (None, 32)                12320     
+                                                                 
+ dense_47 (Dense)            (None, 32)                1056      
+                                                                 
+ dense_48 (Dense)            (None, 3)                 99        
                                                                  
 =================================================================
-
-Total params: 12,211
-Trainable params: 12,211
+Total params: 53,523
+Trainable params: 53,523
 Non-trainable params: 0
 _________________________________________________________________
 
 **Training results**
-Training Accuracy: 0.9974166750907898
-Training Loss: 0.012660179287195206
+Training Accuracy: 1.0
+Training Loss: 0.00013645575381815434
 _________________________________________________________________
 
 **Evaluation results**
-Validation Accuracy: 0.9886666536331177
-Validation Loss: 0.05800541117787361
+Validation Accuracy: 0.9959999918937683
+Validation Loss: 0.02530823089182377
 _________________________________________________________________
 
-Unoptimized custom_conv_model TFLite test_accuracy: 0.9886666666666667
-Optimized custom_conv_model TFLite test_accuracy: 0.988
+Unoptimized modified_conv_model_paper TFLite test_accuracy: 0.9926666666666667
+Optimized modified_conv_model_paper TFLite test_accuracy: 0.9926666666666667
 _________________________________________________________________
 
 TFLite model size:
 ===========================
-Unoptimized : 52432 Bytes
-Optimized : 16712 Bytes
+Unoptimized : 219920 Bytes
+Optimized : 62736 Bytes
+
 
 ========================================================================================================================
 ## DEPLOYMENTS ##
 ========================================================================================================================
-**My Custom Conv Model Deployment Arduino Nano BLE 33**
+**Modified Paper Conv Model to 2D Deployment Arduino Nano BLE 33**
 
-**Micro_op_resolver**
-Sketch uses `222944 bytes (22%) `of program storage space. Maximum is 983040 bytes.
-Global variables use `105656 bytes (40%)` of dynamic memory, leaving 156488 bytes for local variables. Maximum is 262144 bytes.
+**All ops resolver**
+Sketch uses 581648 bytes (59%) of program storage space. Maximum is 983040 bytes.
+Global variables use 213432 bytes (81%) of dynamic memory, leaving 48712 bytes for local variables. Maximum is 262144 bytes.
 
-tensor_arena_size = `49252 bytes`
-Average inference time : `125408.72 microseconds`
-STD of inference time  : `111.23 microseconds`
-Max inference time     : `125792 microseconds`
-Min inference time     : `125253 microseconds`
-
+tensor_arena_size = `145932 bytes`
+Average inference time : `1130094.37 microseconds`
+STD of inference time  : `17.98 microseconds`
+Max inference time     : `1130115 microseconds`
+Min inference time     : `1130053 microseconds`
 
 ========================================================================================================================
-**My Custom Conv model `Optimized` deployment Arduino Nano BLE 33**
+**Modified Paper Conv Model to 2D `Optimized` deployment Arduino Nano BLE 33**
 
-**Micro_op_resolver**
-Sketch uses `190840 bytes (19%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `68880 bytes (26%)` of dynamic memory, leaving 193264 bytes for local variables. Maximum is 262144 bytes.
-
+**All ops resolver**
+Sketch uses `424464 bytes (43%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `99768 bytes (38%)` of dynamic memory, leaving 162376 bytes for local variables. Maximum is 262144 bytes.
 ### REMARK: 
 #### Optimized model improved inference time by ~2 times.
-tensor_arena_size = `13476 bytes`
-Average inference time : `64625.84 microseconds`
-STD of inference time  : `339.44 microseconds`
-Max inference time     : `65436 microseconds`
-Min inference time     : `62756 microseconds`
+tensor_arena_size = `38732 bytes`
+Average inference time : `626224.00 microseconds`
+STD of inference time  : `129.70 microseconds`
+Max inference time     : `626550 microseconds`
+Min inference time     : `626105 microseconds`
+
 
 ========================================================================================================================
 
 ========================================================================================================================
-**Dense Model Deployment STM Nucleo L432KC**
+**Modified Paper Conv Model to 2D Deployment STM Nucleo L432KC**
 
 **All ops resolver**
 Sketch uses `207052 bytes (78%)` of program storage space. Maximum is 262144 bytes.
@@ -94,7 +104,7 @@ Min inference time     : `1411 microseconds`
 
 
 ========================================================================================================================
-**Dense Model `Optimized` Deployment STM Nucleo L432KC**
+**Modified Paper Conv Model to 2D `Optimized` Deployment STM Nucleo L432KC**
 
 **Micro_op_resolver**
 Sketch uses `68908 bytes (26%)` of program storage space. Maximum is 262144 bytes.
@@ -109,7 +119,7 @@ Min inference time     : `2214 microseconds`
 ======================================================================================================================
 
 ======================================================================================================================
-**Dense Model Deployment Seeduino Xiao**
+**Modified Paper Conv Model to 2D Deployment Seeduino Xiao**
 
 **All ops resolver**
 Sketch uses `232372 bytes (88%)` of program storage space. Maximum is 262144 bytes.
@@ -126,7 +136,7 @@ Max inference time     : `32172 microseconds`
 Min inference time     : `32154 microseconds`
 ========================================================================================================================
 
-**Dense Model `Optimized` Deployment Seeduino Xiao**
+**Modified Paper Conv Model to 2D `Optimized` Deployment Seeduino Xiao**
 
 **All ops resolver**
 Sketch uses `220452 bytes (84%)` of program storage space. Maximum is 262144 bytes.
@@ -146,7 +156,7 @@ Min inference time     : `20378 microseconds`
 ========================================================================================================================
 
 ======================================================================================================================
-**Dense Model Deployment Nucleo F401RE**
+**Modified Paper Conv Model to 2D Deployment Nucleo F401RE**
 
 **Micro_op_resolver**
 Sketch uses `74548 bytes (14%)` of program storage space. Maximum is 524288 bytes.
@@ -161,76 +171,74 @@ Min inference time     : `1251 microseconds`
 
 ========================================================================================================================
 
-**Dense Model `Optimized` Deployment Nucleo F401RE**
+**Modified Paper Conv Model to 2D `Optimized` Deployment Nucleo F401RE**
+
+
+
+========================================================================================================================
+======================================================================================================================
+**Modified Paper Conv Model to 2D Deployment Raspberry Pi Pico**
+
+**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+
+========================================================================================================================
+
+**Modified Paper Conv Model to 2D `Optimized` Deployment Raspberry Pi Pico**
+
+**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+
+========================================================================================================================
+
+======================================================================================================================
+**Modified Paper Conv Model to 2D Deployment ESP-32S -NodeMCU v1.3**
 
 **Micro_op_resolver**
-Sketch uses `65756 bytes (12%)` of program storage space. Maximum is 524288 bytes.
-Global variables use `18312 bytes (18%)` of dynamic memory, leaving 79992 bytes for local variables. Maximum is 98304 bytes.
-
-
-tensor_arena_size = `6000`
-Average inference time : `2037.93 microseconds` (10k samples)
-STD of inference time  : `0.71 microseconds`
-Max inference time     : `2044 microseconds`
-Min inference time     : `2037 microseconds`
-
-========================================================================================================================
-======================================================================================================================
-**Dense Model Deployment Raspberry Pi Pico**
-
-**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+**DEPLOYED BUT COULND'T RUN MODEL ON MCU**
+    Used static DRAM:  165892 bytes (  14844 remain, 91.8% used)
+        .data size:   14404 bytes
+        .bss  size:  151488 bytes
+    Used static IRAM:   43818 bytes (  87254 remain, 33.4% used)
+        .text size:   42791 bytes
+    .vectors size:    1027 bytes
+    Used Flash size :  405015 bytes
+        .text     :  141639 bytes
+        .rodata   :  263120 bytes
+    Total image size:  463237 bytes (.bin may be padded larger)
 
 ========================================================================================================================
 
-**Dense Model `Optimized` Deployment Raspberry Pi Pico**
+**Modified Paper Conv Model to 2D `Optimized` Deployment ESP-32S -NodeMCU v1.3**
 
-**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
-
-========================================================================================================================
-
-======================================================================================================================
-**Dense Model Deployment ESP-32S -NodeMCU v1.3**
+**All ops resolver**
+Total sizes:
+Used static DRAM:   66708 bytes ( 114028 remain, 36.9% used)
+      .data size:   14404 bytes
+      .bss  size:   52304 bytes
+Used static IRAM:   44018 bytes (  87054 remain, 33.6% used)
+      .text size:   42991 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  629467 bytes
+      .text     :  487019 bytes
+      .rodata   :  142192 bytes
+Total image size:  687889 bytes (.bin may be padded larger)
 
 **Micro_op_resolver**
 Total sizes:
-Used static DRAM:   72572 bytes ( 108164 remain, 40.2% used)
+Used static DRAM:   61396 bytes ( 119340 remain, 34.0% used)
       .data size:   14404 bytes
-      .bss  size:   58168 bytes
+      .bss  size:   46992 bytes
 Used static IRAM:   43818 bytes (  87254 remain, 33.4% used)
       .text size:   42791 bytes
    .vectors size:    1027 bytes
-Used Flash size :  237535 bytes
-      .text     :  141647 bytes
-      .rodata   :   95632 bytes
-Total image size:  295757 bytes (.bin may be padded larger)
-
-tensor_arena_size = `49284 bytes`
-Average inference time : `47669.9648 microseconds.`
-STD of inference time  : `5.0980 microseconds.`
-Max inference time     : `47676 microseconds`
-Min inference time     : `47621 microseconds`
-
-========================================================================================================================
-
-**My Custom Conv Model `Optimized` ESP-32S -NodeMCU v1.3**
-
-**Micro_op_resolver**
-Used static DRAM:   35796 bytes ( 144940 remain, 19.8% used)
-      .data size:   14404 bytes
-      .bss  size:   21392 bytes
-Used static IRAM:   43818 bytes (  87254 remain, 33.4% used)
-      .text size:   42791 bytes
-   .vectors size:    1027 bytes
-Used Flash size :  209195 bytes
+Used Flash size :  255219 bytes
       .text     :  148187 bytes
-      .rodata   :   60752 bytes
-Total image size:  267417 bytes (.bin may be padded larger)
+      .rodata   :  106776 bytes
+Total image size:  313441 bytes (.bin may be padded larger)
 
-
-tensor_arena_size = `13452`
-Average inference time : `22744.2129 microseconds.`
-STD of inference time  : `19.7841 microseconds.`
-Max inference time     : `23351 microseconds`
-Min inference time     : `22738 microseconds`
-
+tensor_arena_size = `38636 bytes`
+Average inference time : `172106.2969 microseconds.`
+STD of inference time  : `72.0834 microseconds.`
+Max inference time     : `172322 microseconds`
+Min inference time     : `172078 microseconds`
 ========================================================================================================================
+
