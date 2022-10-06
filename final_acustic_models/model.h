@@ -30,9 +30,9 @@ limitations under the License.
 #define DATA_ALIGN_ATTRIBUTE
 #endif
 
-#define ALL_OPS_RESOLVER 1
-#define DENSE_MODEL 1
-#define DENSE_MODEL_OPTIMIZED 0
+#define ALL_OPS_RESOLVER 0
+#define DENSE_MODEL 0
+#define DENSE_MODEL_OPTIMIZED 1
 #define CUSTOM_CONV_MODEL 0
 #define CUSTOM_CONV_MODEL_OPTIMIZED 0
 #define CONV_MODEL_PAPER 0

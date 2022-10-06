@@ -43,10 +43,10 @@ namespace
   // The size of this will depend on the model you're using, and may need to be
   // determined by experimentation.
   #if DENSE_MODEL
-    constexpr int kTensorArenaSize = 10 * 1024;
+    constexpr int kTensorArenaSize = 8828;
   #endif
   #if DENSE_MODEL_OPTIMIZED && !ALL_OPS_RESOLVER
-    constexpr int kTensorArenaSize = 6044;
+    constexpr int kTensorArenaSize = 8828;
   #endif
   #if CUSTOM_CONV_MODEL
     constexpr int kTensorArenaSize = 100 * 1024;
@@ -65,6 +65,7 @@ namespace
   #endif    
   static uint8_t tensor_arena[kTensorArenaSize]; // Maybe we should move this to external
 } // namespace
+
 enum error_status
 {
   kNoError = 0,
@@ -331,7 +332,44 @@ float example_signal[1000] = { -6.06968882e-04, -6.06968882e-04, -6.06968882e-04
 #define NUM_SAMPLES 1000
 unsigned int inference_time[NUM_SAMPLES] = {};
 unsigned int inference_index = 0;
+unsigned int min_inference_time = 0xFFFFFFFF;
+unsigned int max_inference_time = 0;
+float mean_inference_time = 0;
+float std_inference_time = 0;
 
+void CalculateInferenceStandardDeviation()
+{
+    unsigned int sum = 0;
+    float mean = 0;
+    float std = 0;
+    for (int i = 0; i < NUM_SAMPLES; i++)
+    {
+        sum += inference_time[i];
+    }
+    mean = float(sum) / NUM_SAMPLES;
+    mean_inference_time = mean;
+    for (int i = 0; i < NUM_SAMPLES; i++)
+    {
+        std += (inference_time[i] - mean) * (inference_time[i] - mean);
+    }
+    std = std / NUM_SAMPLES;
+    std_inference_time = sqrt(std);
+}
+
+void CalculateMaxMinInferenceTime()
+{
+    for (int i = 0; i < NUM_SAMPLES; i++)
+    {
+        if (inference_time[i] < min_inference_time)
+        {
+            min_inference_time = inference_time[i];
+        }
+        if (inference_time[i] > max_inference_time)
+        {
+            max_inference_time = inference_time[i];
+        }
+    }
+}
 // The name of this function is important for Arduino compatibility.
 void setup()
 {
@@ -470,11 +508,12 @@ void loop()
     inference_time[inference_index] = t2-t1;
     inference_index++;
   }else{
-    float sum = 0;
-    for(int i = 0; i < NUM_SAMPLES; i++){
-      sum += inference_time[i];
-    }
-    Serial.print("Average time taken by the task: "); Serial.print(sum/NUM_SAMPLES); Serial.println(" microseconds");
+    CalculateInferenceStandardDeviation();
+    CalculateMaxMinInferenceTime();
+    Serial.print("Average inference time : "); Serial.print(mean_inference_time); Serial.println(" microseconds");
+    Serial.print("STD of inference time  : "); Serial.print(std_inference_time); Serial.println(" microseconds");
+    Serial.print("Max inference time     : "); Serial.print(max_inference_time); Serial.println(" microseconds");
+    Serial.print("Min inference time     : "); Serial.print(min_inference_time); Serial.println(" microseconds");
     Serial.print(interpreter->arena_used_bytes(),DEC);
     Serial.println(" bytes used.");
     Serial.print("Recognized val_0 = ");
@@ -484,6 +523,10 @@ void loop()
     Serial.print("Recognized val_2 =");
     Serial.println(output->data.f[2],4);
     inference_index = 0;
+    max_inference_time = 0;
+    min_inference_time = 0xFFFFFFFF;
+    mean_inference_time = 0;
+    std_inference_time = 0;
   }
 
 }
