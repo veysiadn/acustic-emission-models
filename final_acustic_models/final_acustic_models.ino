@@ -435,7 +435,33 @@ void setup()
   micro_op_resolver.AddDequantize();
   micro_op_resolver.AddSoftmax();
 #endif
-#if CUSTOM_CONV_MODEL || CUSTOM_CONV_MODEL_OPTIMIZED || CONV_MODEL_PAPER || CONV_MODEL_PAPER_2D || CONV_MODEL_PAPER_OPTIMIZED || ALL_OPS_RESOLVER
+#if CUSTOM_CONV_MODEL
+  static tflite::MicroMutableOpResolver<8> micro_op_resolver;
+  micro_op_resolver.AddShape();
+  micro_op_resolver.AddStridedSlice();
+  micro_op_resolver.AddPack();
+  micro_op_resolver.AddReshape();
+  micro_op_resolver.AddConv2D();
+  micro_op_resolver.AddMaxPool2D();
+  micro_op_resolver.AddFullyConnected();
+  micro_op_resolver.AddSoftmax();
+#endif 
+
+#if CUSTOM_CONV_MODEL_OPTIMIZED
+  static tflite::MicroMutableOpResolver<10> micro_op_resolver;
+  micro_op_resolver.AddQuantize();
+  micro_op_resolver.AddShape();
+  micro_op_resolver.AddStridedSlice();
+  micro_op_resolver.AddPack();
+  micro_op_resolver.AddReshape();
+  micro_op_resolver.AddConv2D();
+  micro_op_resolver.AddMaxPool2D();
+  micro_op_resolver.AddFullyConnected();
+  micro_op_resolver.AddSoftmax();
+  micro_op_resolver.AddDequantize();
+#endif
+
+#if  CONV_MODEL_PAPER || CONV_MODEL_PAPER_2D || CONV_MODEL_PAPER_OPTIMIZED || ALL_OPS_RESOLVER
   static tflite::AllOpsResolver micro_op_resolver;
 #endif
 
