@@ -15,21 +15,15 @@ limitations under the License.
 
 #include <TensorFlowLite.h>
 
-//#include "audio_provider.h"
-//#include "command_responder.h"
-//#include "feature_provider.h"
 #include "main_functions.h"
 #include "model.h"
-//#include "micro_features_micro_model_settings.h"
 #include "tensorflow/lite/micro/all_ops_resolver.h"
-//#include "recognize_commands.h"
 #include "tensorflow/lite/micro/micro_error_reporter.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/micro/micro_mutable_op_resolver.h"
 #include "tensorflow/lite/micro/system_setup.h"
 #include "tensorflow/lite/schema/schema_generated.h"
 
-// Globals, used for compatibility with Arduino-style sketches.
 namespace
 {
   tflite::ErrorReporter *error_reporter = nullptr;
@@ -370,7 +364,7 @@ void CalculateMaxMinInferenceTime()
         }
     }
 }
-// The name of this function is important for Arduino compatibility.
+
 void setup()
 {
   Serial.begin(9600);

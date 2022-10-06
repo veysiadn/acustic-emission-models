@@ -165,3 +165,76 @@ Max inference time     : `2044 microseconds`
 Min inference time     : `2037 microseconds`
 
 ========================================================================================================================
+======================================================================================================================
+**Dense Model Deployment Raspberry Pi Pico**
+
+**Micro_op_resolver**
+UF2 file size `274944 bytes`
+
+tensor_arena_size = `8680 bytes`
+Average inference time : `7441.3696 microseconds.`
+STD of inference time  : `40.7673 microseconds.`
+Max inference time     : `8631 microseconds`
+Min inference time     : `7351 microseconds`
+
+========================================================================================================================
+
+**Dense Model `Optimized` Deployment Raspberry Pi Pico**
+
+**Micro_op_resolver**
+UF2 file size `265216 bytes bytes`
+
+tensor_arena_size = `5848`
+Average inference time : `3491.7595 microseconds.`
+STD of inference time  : `47.7116 microseconds.`
+Max inference time     : `3886 microseconds`
+Min inference time     : `3394 microseconds`
+
+========================================================================================================================
+
+======================================================================================================================
+**Dense Model Deployment ESP-32S -NodeMCU v1.3**
+
+**Micro_op_resolver**
+Total sizes:
+Used static DRAM:  ` 30100 bytes ( 150636 remain, 16.7% used)`
+      .data size:  ` 14404 bytes`
+      .bss  size:  ` 15696 bytes`
+Used static IRAM:  ` 43818 bytes (  87254 remain, 33.4% used)`
+      .text size:  ` 42791 bytes`
+   .vectors size:  `  1027 bytes`
+Used Flash size :  `194195 bytes`
+      .text     :  `132995 bytes`
+      .rodata   :  ` 60944 bytes`
+Total image size:  `252417 bytes (.bin may be padded larger)`
+
+tensor_arena_size = `8858 bytes`
+Average inference time : `398.2749 microseconds.`
+STD of inference time  : `3.1812 microseconds.`
+Max inference time     : `645 microseconds`
+Min inference time     : `397 microseconds`
+
+========================================================================================================================
+
+**Dense Model `Optimized` ESP-32S -NodeMCU v1.3**
+
+**Micro_op_resolver**
+Total sizes:
+Used static DRAM:   27428 bytes ( 153308 remain, 15.2% used)
+      .data size:   14404 bytes
+      .bss  size:   13024 bytes
+Used static IRAM:   43818 bytes (  87254 remain, 33.4% used)
+      .text size:   42791 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  190291 bytes
+      .text     :  139531 bytes
+      .rodata   :   50504 bytes
+Total image size:  248513 bytes (.bin may be padded larger)
+
+tensor_arena_size = `6008`
+Average inference time : `1144.2606 microseconds.`
+STD of inference time  : `4.3867 microseconds.`
+Max inference time     : `1218 microseconds`
+Min inference time     : `1142 microseconds`
+
+========================================================================================================================
