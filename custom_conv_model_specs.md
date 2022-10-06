@@ -37,5 +37,5 @@ _________________________________________________________________
 
 TFLite model size:
 ===========================
-Unoptimized : 52436 Bytes
-Optimized : 16520 Bytes
+Unoptimized : 52432 Bytes
+Optimized : 16712 Bytes

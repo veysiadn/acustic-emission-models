@@ -25,17 +25,17 @@ Validation Loss: 0.14419926702976227
 _________________________________________________________________
 
 Unoptimized dense_model TFLite test_accuracy: 0.9686666666666667
-Optimized dense_model TFLite test_accuracy: 0.9686666666666667
+Optimized dense_model TFLite test_accuracy: 0.968
 _________________________________________________________________
 
 ===========================
 **TFLite model size:**
-Unoptimized : 18412 Bytes
-Optimized : 6496 Bytes  
-## Remark : Optimized model should be completely quantized otherwise it is giving NaN output values.
+Unoptimized : 18340 Bytes
+Optimized : 7024 Bytes  
 ===========================
 
-===================================================================
+========================================================================================================================
+========================================================================================================================
 **Dense Model Deployment Arduino Nano BLE 33**
 
 **All ops resolver**
@@ -43,27 +43,27 @@ Sketch uses `379544 bytes (38%)` of program storage space. Maximum is 983040 byt
 Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes.
 
 **Micro_op_resolver**
-Sketch uses `177280 bytes (18%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `63168 bytes (24%)` of dynamic memory, leaving 198976 bytes for local variables. Maximum is 262144 bytes.
+Sketch uses `177472 bytes (18%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `63176 bytes (24%)` of dynamic memory, leaving 198968 bytes for local variables. Maximum is 262144 bytes.
 
-tensor_arena_size = `8864`
-Average inference time: `9778.27 us` (10k samples)
-=======================================================================
-**Dense model optimized deployment Arduino Nano BLE 33**
+tensor_arena_size = `8868 bytes`
+Average inference time: `993.27 us` (10k samples)
+========================================================================================================================
+**Dense model `Optimized` deployment Arduino Nano BLE 33**
 
 **All ops resolver**
 Sketch uses `367624 bytes (37%)` of program storage space. Maximum is 983040 bytes.
 Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes.
 
 **Micro_op_resolver**
-Sketch uses `165360 bytes (16%) `of program storage space. Maximum is 983040 bytes.
-Global variables use `63176 bytes (24%)` of dynamic memory, leaving 198968 bytes for local variables. Maximum is 262144 bytes.
+Sketch uses `169328 bytes (17%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `60440 bytes (23%)` of dynamic memory, leaving 201704 bytes for local variables. Maximum is 262144 bytes.
+### REMARK: Optimized model adds to more layers, namely Quantize and Dequantize layers for that reasons inference time is slowed down by 2.8 times.
+tensor_arena_size = `6040 bytes`
+Average inference time: `2801.10 us` (10k samples)
+========================================================================================================================
 
-tensor_arena_size = `8864`
-Average inference time: `856.34 us` (10k samples)
-========================================================================
-
-========================================================================
+========================================================================================================================
 **Dense Model Deployment STM Nucleo L432KC**
 
 **All ops resolver**
@@ -77,8 +77,8 @@ Global variables use `18300 bytes (27%)` of dynamic memory, leaving 47236 bytes 
 
 tensor_arena_size = `8824`
 Average inference time: `1412.45 us` (10k samples)
-=======================================================================
-========================================================================
+
+========================================================================================================================
 **Dense Model `Optimized` Deployment STM Nucleo L432KC**
 
 **Micro_op_resolver**
@@ -88,10 +88,9 @@ Global variables use `18308 bytes (27%)` of dynamic memory, leaving 47228 bytes 
 
 tensor_arena_size = `8824`
 Average inference time: `1412.45 us` (10k samples)
-=======================================================================
+======================================================================================================================
 
-
-========================================================================
+======================================================================================================================
 **Dense Model Deployment Seeduino Xiao**
 
 **All ops resolver**
@@ -105,8 +104,8 @@ Sketch uses `98028 bytes (37%)` of program storage space. Maximum is 262144 byte
 
 tensor_arena_size = `8828`
 Average inference time: `32166.25 us` (10k samples)
-=======================================================================
-========================================================================
+========================================================================================================================
+
 **Dense Model `Optimized` Deployment Seeduino Xiao**
 
 **All ops resolver**
@@ -120,4 +119,4 @@ Sketch uses `86116 bytes (32%)` of program storage space. Maximum is 262144 byte
 
 tensor_arena_size = `8828`
 Average inference time: `30640.19 us` (10k samples)
-=======================================================================
+========================================================================================================================

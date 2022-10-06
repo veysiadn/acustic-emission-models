@@ -1,0 +1,5 @@
+{
+    "port": "/dev/ttyACM1",
+    "board": "arduino:mbed_nano:nano33ble",
+    "sketch": "micro_speech_modified_nano_33_ble.ino"
+}
