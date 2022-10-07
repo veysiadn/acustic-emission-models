@@ -76,22 +76,16 @@ Min inference time     : `62756 microseconds`
 ========================================================================================================================
 **Dense Model Deployment STM Nucleo L432KC**
 
-**All ops resolver**
-Sketch uses `207052 bytes (78%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `22892 bytes (34%)` of dynamic memory, leaving 42644 bytes for local variables. Maximum is 65536 bytes.
-R
-
 **Micro_op_resolver**
 Sketch uses `77692 bytes (29%)` of program storage space. Maximum is 262144 bytes.
 Global variables use `18308 bytes (27%)` of dynamic memory, leaving 47228 bytes for local variables. Maximum is 65536 bytes.
 
 
-tensor_arena_size = `8828`
-Average inference time : `1412.28 microseconds` (10k samples)
-STD of inference time  : `0.79 microseconds`
-Max inference time     : `1425 microseconds`
-Min inference time     : `1411 microseconds`
-
+tensor_arena_size = `13456 bytes`
+Average inference time : `42589.25 microseconds`
+STD of inference time  : `3.95 microseconds`
+Max inference time     : `42711 microseconds`
+Min inference time     : `42588 microseconds`
 
 ========================================================================================================================
 **Dense Model `Optimized` Deployment STM Nucleo L432KC**

@@ -86,106 +86,85 @@ Min inference time     : `626105 microseconds`
 ========================================================================================================================
 **Modified Paper Conv Model to 2D Deployment STM Nucleo L432KC**
 
-**All ops resolver**
-Sketch uses `207052 bytes (78%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `22892 bytes (34%)` of dynamic memory, leaving 42644 bytes for local variables. Maximum is 65536 bytes.
-R
-
-**Micro_op_resolver**
-Sketch uses `77692 bytes (29%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `18308 bytes (27%)` of dynamic memory, leaving 47228 bytes for local variables. Maximum is 65536 bytes.
-
-
-tensor_arena_size = `8828`
-Average inference time : `1412.28 microseconds` (10k samples)
-STD of inference time  : `0.79 microseconds`
-Max inference time     : `1425 microseconds`
-Min inference time     : `1411 microseconds`
-
+`**NOT POSSIBLE DUE TO 64KB SRAM SIZE**`
 
 ========================================================================================================================
 **Modified Paper Conv Model to 2D `Optimized` Deployment STM Nucleo L432KC**
 
 **Micro_op_resolver**
-Sketch uses `68908 bytes (26%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `15548 bytes (23%)` of dynamic memory, leaving 49988 bytes for local variables. Maximum is 65536 bytes.
+Sketch uses `138960 bytes (53%)` of program storage space. Maximum is 262144 bytes.
+Global variables use `46680 bytes (71%)` of dynamic memory, leaving 18856 bytes for local variables. Maximum is 65536 bytes.
 
-tensor_arena_size = `5996`
-Average inference time : `2214.97 microseconds` (10k samples)
-STD of inference time  : `0.72 microseconds`
-Max inference time     : `2238 microseconds`
-Min inference time     : `2214 microseconds`
+
+tensor_arena_size = `38672`
+Average inference time : `390100.00 microseconds`
+STD of inference time  : `61.67 microseconds`
+Max inference time     : `390285 microseconds`
+Min inference time     : `390079 microseconds`
 
 ======================================================================================================================
 
 ======================================================================================================================
 **Modified Paper Conv Model to 2D Deployment Seeduino Xiao**
 
-**All ops resolver**
-Sketch uses `232372 bytes (88%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
-
-**Micro_op_resolver**
-Sketch uses `98028 bytes (37%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
-
-tensor_arena_size = `8828`
-Average inference time : `32160.86 microseconds` (10k samples)
-STD of inference time  : `2.08 microseconds`
-Max inference time     : `32172 microseconds`
-Min inference time     : `32154 microseconds`
+`**NOT POSSIBLE DUE TO 32KB SRAM SIZE**`
 ========================================================================================================================
 
 **Modified Paper Conv Model to 2D `Optimized` Deployment Seeduino Xiao**
 
-**All ops resolver**
-Sketch uses `220452 bytes (84%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
-
-**Micro_op_resolver**
-Sketch uses `86116 bytes (32%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
-
-tensor_arena_size = `6000`
-Average inference time : `20384.15 microseconds` (10k samples)
-STD of inference time  : `2.72 microseconds`
-Max inference time     : `20392 microseconds`
-Min inference time     : `20378 microseconds`
-
+`**NOT POSSIBLE DUE TO 32KB SRAM SIZE**`
 
 ========================================================================================================================
 
 ======================================================================================================================
 **Modified Paper Conv Model to 2D Deployment Nucleo F401RE**
 
-**Micro_op_resolver**
-Sketch uses `74548 bytes (14%)` of program storage space. Maximum is 524288 bytes.
-Global variables use `18240 bytes (18%)` of dynamic memory, leaving 80064 bytes for local variables. Maximum is 98304 bytes.
-
-
-tensor_arena_size = `8816 bytes`
-Average inference time : `1251.34 microseconds` (10k samples)
-STD of inference time  : `0.48 microseconds`
-Max inference time     : `1258 microseconds`
-Min inference time     : `1251 microseconds`
+`**NOT POSSIBLE DUE TO 96KB SRAM SIZE**`
 
 ========================================================================================================================
 
 **Modified Paper Conv Model to 2D `Optimized` Deployment Nucleo F401RE**
+**Micro ops resolver**
+Sketch uses `135360 bytes (25%)` of program storage space. Maximum is 524288 bytes.
+Global variables use `46596 bytes (47%)` of dynamic memory, leaving 51708 bytes for local variables. Maximum is 98304 bytes.
 
-
+tensor_arena_size = `38676`
+Average inference time : `364486.31 microseconds`
+STD of inference time  : `32.58 microseconds`
+Max inference time     : `364584 microseconds`
+Min inference time     : `364474 microseconds`
 
 ========================================================================================================================
 ======================================================================================================================
 **Modified Paper Conv Model to 2D Deployment Raspberry Pi Pico**
 
-**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS** `Initial issue, but fixed after some time.`
+### Remark: I had to change strided slice.cc file in the library and add Int32 support to strided slice opeation.
+
+**Micro ops resolver**
+UF2 file size `726016 bytes bytes`
+tensor_arena_size = `146312 bytes`
+Average inference time : `3236171.0000 microseconds.` (100 samples)
+STD of inference time  : `187.8904 microseconds.`
+Max inference time     : `3236439 microseconds`
+Min inference time     : `3235901 microseconds`
+
 
 ========================================================================================================================
 
 **Modified Paper Conv Model to 2D `Optimized` Deployment Raspberry Pi Pico**
 
-**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+**All ops resolver**
+UF2 file size `794112 bytes bytes`
+
+tensor_arena_size = `38456 bytes`
+Average inference time : `589597.5000 microseconds.`  (1000 samples)
+STD of inference time  : `50.8473 microseconds.`
+Max inference time     : `589705 microseconds`
+Min inference time     : `589537 microseconds`
+**Micro_op_resolver**
+UF2 file size `424448 bytes`
+**All other specs are same.**
 
 ========================================================================================================================
 
@@ -193,7 +172,7 @@ Min inference time     : `1251 microseconds`
 **Modified Paper Conv Model to 2D Deployment ESP-32S -NodeMCU v1.3**
 
 **Micro_op_resolver**
-**DEPLOYED BUT COULND'T RUN MODEL ON MCU**
+`**DEPLOYED BUT COULND'T RUN MODEL ON MCU**`
     Used static DRAM:  165892 bytes (  14844 remain, 91.8% used)
         .data size:   14404 bytes
         .bss  size:  151488 bytes
