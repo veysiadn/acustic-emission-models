@@ -43,10 +43,10 @@ namespace
     constexpr int kTensorArenaSize = 8828;
   #endif
   #if CUSTOM_CONV_MODEL
-    constexpr int kTensorArenaSize = 100 * 1024;
+    constexpr int kTensorArenaSize = 75 * 1024;
   #endif
   #if CUSTOM_CONV_MODEL_OPTIMIZED
-    constexpr int kTensorArenaSize = 100 * 1024;
+    constexpr int kTensorArenaSize = 20 * 1024;
   #endif
   #if CONV_MODEL_PAPER
     constexpr int kTensorArenaSize = 100 * 1024;
@@ -54,8 +54,8 @@ namespace
   #if CONV_MODEL_PAPER_2D
     constexpr int kTensorArenaSize = 100 * 1024;
   #endif  
-  #if CONV_MODEL_PAPER_OPTIMIZED
-    constexpr int kTensorArenaSize = 100 * 1024;
+  #if CONV_MODEL_PAPER_2D_OPTIMIZED
+    constexpr int kTensorArenaSize = 40 * 1024;
   #endif    
   static uint8_t tensor_arena[kTensorArenaSize]; // Maybe we should move this to external
 } // namespace
@@ -323,7 +323,6 @@ float example_signal[1000] = { -6.06968882e-04, -6.06968882e-04, -6.06968882e-04
         3.38124931e-01,  3.34003448e-01,  3.42653990e-01,  3.40951651e-01,
         3.09643686e-01,  2.54878074e-01,  2.00003654e-01,  1.51090160e-01};
 
-#define NUM_SAMPLES 1000
 unsigned int inference_time[NUM_SAMPLES] = {};
 unsigned int inference_index = 0;
 unsigned int min_inference_time = 0xFFFFFFFF;
@@ -400,7 +399,7 @@ void setup()
   #endif
   
   #if CONV_MODEL_PAPER_2D_OPTIMIZED
-    model = tflite::GetModel(conv_model_paper_2D_quantized_tflite);
+    model = tflite::GetModel(conv_model_paper_2D_optimized_tflite);
   #endif
 
 
@@ -460,8 +459,32 @@ void setup()
   micro_op_resolver.AddSoftmax();
   micro_op_resolver.AddDequantize();
 #endif
+#if CONV_MODEL_PAPER_2D
+  static tflite::MicroMutableOpResolver<8> micro_op_resolver;
+  micro_op_resolver.AddShape();
+  micro_op_resolver.AddStridedSlice();
+  micro_op_resolver.AddPack();
+  micro_op_resolver.AddReshape();
+  micro_op_resolver.AddConv2D();
+  micro_op_resolver.AddMaxPool2D();
+  micro_op_resolver.AddFullyConnected();
+  micro_op_resolver.AddSoftmax();
+#endif
+#if CONV_MODEL_PAPER_2D_OPTIMIZED
+  static tflite::MicroMutableOpResolver<10> micro_op_resolver;
+  micro_op_resolver.AddQuantize();
+  micro_op_resolver.AddShape();
+  micro_op_resolver.AddStridedSlice();
+  micro_op_resolver.AddPack();
+  micro_op_resolver.AddReshape();
+  micro_op_resolver.AddConv2D();
+  micro_op_resolver.AddMaxPool2D();
+  micro_op_resolver.AddFullyConnected();
+  micro_op_resolver.AddSoftmax();
+  micro_op_resolver.AddDequantize();
 
-#if  CONV_MODEL_PAPER || CONV_MODEL_PAPER_2D || CONV_MODEL_PAPER_OPTIMIZED || ALL_OPS_RESOLVER
+#endif
+#if  CONV_MODEL_PAPER ||  ALL_OPS_RESOLVER
   static tflite::AllOpsResolver micro_op_resolver;
 #endif
 

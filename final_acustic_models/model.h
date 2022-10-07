@@ -30,14 +30,15 @@ limitations under the License.
 #define DATA_ALIGN_ATTRIBUTE
 #endif
 
+#define NUM_SAMPLES 10
 #define ALL_OPS_RESOLVER 0
 #define DENSE_MODEL 0
-#define DENSE_MODEL_OPTIMIZED 1
+#define DENSE_MODEL_OPTIMIZED 0
 #define CUSTOM_CONV_MODEL 0
 #define CUSTOM_CONV_MODEL_OPTIMIZED 0
 #define CONV_MODEL_PAPER 0
 #define CONV_MODEL_PAPER_2D 0
-#define CONV_MODEL_PAPER_2D_OPTIMIZED 0
+#define CONV_MODEL_PAPER_2D_OPTIMIZED 1
 
 #if DENSE_MODEL
   const unsigned char dense_model_tflite[] DATA_ALIGN_ATTRIBUTE = {
