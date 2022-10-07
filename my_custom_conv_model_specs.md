@@ -164,7 +164,17 @@ Min inference time     : `39305 microseconds`
 ======================================================================================================================
 **My Custom Conv model Deployment Raspberry Pi Pico**
 
-**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+**COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**  
+`SOLVED THIS ISSUE BY CHANGING strided_slice_cpp file. Adding support to int32`
+**Micro_op_resolver**
+UF2 file size `390656 bytes bytes`
+
+tensor_arena_size = `49128 bytes`
+Average inference time : `183083.5000 microseconds.` (1000 samples)
+STD of inference time  : `28.1434 microseconds.`
+Max inference time     : `183136 microseconds`
+Min inference time     : `183040 microseconds`
+
 
 ========================================================================================================================
 
@@ -173,6 +183,16 @@ Min inference time     : `39305 microseconds`
 **COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
 **Type INT32 (2) not supported.**
 **Node STRIDED_SLICE (number 2) failed to invoke with status 1**
+`SOLVED THIS ISSUE BY CHANGING strided_slice_cpp file. Adding support to int32`
+
+**Micro_op_resolver**
+UF2 file size `332288 bytes bytes`
+
+tensor_arena_size = `13288 bytes`
+Average inference time : `53747.3008 microseconds.` (1000 samples)
+STD of inference time  : `116.0354 microseconds.`
+Max inference time     : `54068 microseconds`
+Min inference time     : `53644 microseconds`
 
 ========================================================================================================================
 
