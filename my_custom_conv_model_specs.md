@@ -185,6 +185,8 @@ Min inference time     : `2037 microseconds`
 **Dense Model `Optimized` Deployment Raspberry Pi Pico**
 
 **COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
+**Type INT32 (2) not supported.**
+**Node STRIDED_SLICE (number 2) failed to invoke with status 1**
 
 ========================================================================================================================
 
