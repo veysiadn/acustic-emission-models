@@ -74,109 +74,101 @@ Min inference time     : `62756 microseconds`
 ========================================================================================================================
 
 ========================================================================================================================
-**Dense Model Deployment STM Nucleo L432KC**
+**My Custom Conv model Deployment STM Nucleo L432KC**
 
 **Micro_op_resolver**
-Sketch uses `77692 bytes (29%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `18308 bytes (27%)` of dynamic memory, leaving 47228 bytes for local variables. Maximum is 65536 bytes.
+Sketch uses `126124 bytes (48%)` of program storage space. Maximum is 262144 bytes.
+Global variables use `57204 bytes (87%)` of dynamic memory, leaving 8332 bytes for local variables. Maximum is 65536 bytes.
+
+
+
+tensor_arena_size = `49216 bytes`
+Average inference time : `102685.07 microseconds`
+STD of inference time  : `10.77 microseconds`
+Max inference time     : `102792 microseconds`
+Min inference time     : `102683 microseconds`
+
+
+========================================================================================================================
+**My Custom Conv model `Optimized` Deployment STM Nucleo L432KC**
+
+**Micro_op_resolver**
+Sketch uses `92936 bytes (35%)` of program storage space. Maximum is 262144 bytes.
+Global variables use `21440 bytes (32%)` of dynamic memory, leaving 44096 bytes for local variables. Maximum is 65536 bytes.
 
 
 tensor_arena_size = `13456 bytes`
-Average inference time : `42589.25 microseconds`
-STD of inference time  : `3.95 microseconds`
-Max inference time     : `42711 microseconds`
-Min inference time     : `42588 microseconds`
+Average inference time : `43147.72 microseconds`
+STD of inference time  : `12.20 microseconds`
+Max inference time     : `43269 microseconds`
+Min inference time     : `43145 microseconds`
 
-========================================================================================================================
-**Dense Model `Optimized` Deployment STM Nucleo L432KC**
-
-**Micro_op_resolver**
-Sketch uses `68908 bytes (26%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `15548 bytes (23%)` of dynamic memory, leaving 49988 bytes for local variables. Maximum is 65536 bytes.
-
-tensor_arena_size = `5996`
-Average inference time : `2214.97 microseconds` (10k samples)
-STD of inference time  : `0.72 microseconds`
-Max inference time     : `2238 microseconds`
-Min inference time     : `2214 microseconds`
 
 ======================================================================================================================
 
 ======================================================================================================================
-**Dense Model Deployment Seeduino Xiao**
+**My Custom Conv model Deployment Seeduino Xiao**
 
-**All ops resolver**
-Sketch uses `232372 bytes (88%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
+`**NOT POSSIBLE DUE TO 32KB SRAM SIZE**`
 
-**Micro_op_resolver**
-Sketch uses `98028 bytes (37%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
-
-tensor_arena_size = `8828`
-Average inference time : `32160.86 microseconds` (10k samples)
-STD of inference time  : `2.08 microseconds`
-Max inference time     : `32172 microseconds`
-Min inference time     : `32154 microseconds`
 ========================================================================================================================
 
-**Dense Model `Optimized` Deployment Seeduino Xiao**
-
-**All ops resolver**
-Sketch uses `220452 bytes (84%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
+**My Custom Conv model `Optimized` Deployment Seeduino Xiao**
 
 **Micro_op_resolver**
-Sketch uses `86116 bytes (32%)` of program storage space. Maximum is 262144 bytes.
+Sketch uses `113788 bytes (43%)` of program storage space. Maximum is 262144 bytes.
 ## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
 
-tensor_arena_size = `6000`
-Average inference time : `20384.15 microseconds` (10k samples)
-STD of inference time  : `2.72 microseconds`
-Max inference time     : `20392 microseconds`
-Min inference time     : `20378 microseconds`
+tensor_arena_size = `13444 bytes`
+Average inference time : `185580.59 microseconds` (10 samples)
+STD of inference time  : `3.70 microseconds`
+Max inference time     : `185604 microseconds`
+Min inference time     : `185573 microseconds`
+
 
 
 ========================================================================================================================
 
 ======================================================================================================================
-**Dense Model Deployment Nucleo F401RE**
+**My Custom Conv model Deployment Nucleo F401RE**
 
 **Micro_op_resolver**
-Sketch uses `74548 bytes (14%)` of program storage space. Maximum is 524288 bytes.
-Global variables use `18240 bytes (18%)` of dynamic memory, leaving 80064 bytes for local variables. Maximum is 98304 bytes.
+Sketch uses `122524 bytes (23%)` of program storage space. Maximum is 524288 bytes.
+Global variables use `57120 bytes (58%)` of dynamic memory, leaving 41184 bytes for local variables. Maximum is 98304 bytes.
 
+tensor_arena_size = `49220 bytes`
+Average inference time : `99225.88 microseconds`  (1000 samples)
+STD of inference time  : `10.59 microseconds`
+Max inference time     : `99296 microseconds`
+Min inference time     : `99192 microseconds`
 
-tensor_arena_size = `8816 bytes`
-Average inference time : `1251.34 microseconds` (10k samples)
-STD of inference time  : `0.48 microseconds`
-Max inference time     : `1258 microseconds`
-Min inference time     : `1251 microseconds`
 
 ========================================================================================================================
 
-**Dense Model `Optimized` Deployment Nucleo F401RE**
+**My Custom Conv model `Optimized` Deployment Nucleo F401RE**
 
 **Micro_op_resolver**
-Sketch uses `65756 bytes (12%)` of program storage space. Maximum is 524288 bytes.
-Global variables use `18312 bytes (18%)` of dynamic memory, leaving 79992 bytes for local variables. Maximum is 98304 bytes.
+Sketch uses `89336 bytes (17%)` of program storage space. Maximum is 524288 bytes.
+Global variables use `21356 bytes (21%)` of dynamic memory, leaving 76948 bytes for local variables. Maximum is 98304 bytes.
 
+### REMARK: 
+#### Optimized model improved inference time by ~2.4 times.
+tensor_arena_size = `13444`
+Average inference time : `39306.54 microseconds` (1000 samples)
+STD of inference time  : `7.09 microseconds`
+Max inference time     : `39371 microseconds`
+Min inference time     : `39305 microseconds`
 
-tensor_arena_size = `6000`
-Average inference time : `2037.93 microseconds` (10k samples)
-STD of inference time  : `0.71 microseconds`
-Max inference time     : `2044 microseconds`
-Min inference time     : `2037 microseconds`
 
 ========================================================================================================================
 ======================================================================================================================
-**Dense Model Deployment Raspberry Pi Pico**
+**My Custom Conv model Deployment Raspberry Pi Pico**
 
 **COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
 
 ========================================================================================================================
 
-**Dense Model `Optimized` Deployment Raspberry Pi Pico**
+**My Custom Conv model `Optimized` Deployment Raspberry Pi Pico**
 
 **COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**
 **Type INT32 (2) not supported.**
@@ -185,7 +177,7 @@ Min inference time     : `2037 microseconds`
 ========================================================================================================================
 
 ======================================================================================================================
-**Dense Model Deployment ESP-32S -NodeMCU v1.3**
+**My Custom Conv model Deployment ESP-32S -NodeMCU v1.3**
 
 **Micro_op_resolver**
 Total sizes:
