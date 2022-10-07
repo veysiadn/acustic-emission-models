@@ -38,9 +38,9 @@ Optimized : 7024 Bytes
 ========================================================================================================================
 **Dense Model Deployment Arduino Nano BLE 33**
 
-**All ops resolver**
+<!-- **All ops resolver**
 Sketch uses `379544 bytes (38%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes.
+Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes. -->
 
 **Micro_op_resolver**
 Sketch uses `177472 bytes (18%)` of program storage space. Maximum is 983040 bytes.
@@ -55,9 +55,9 @@ Min inference time     : `935 microseconds`
 ========================================================================================================================
 **Dense model `Optimized` deployment Arduino Nano BLE 33**
 
-**All ops resolver**
+<!-- **All ops resolver**
 Sketch uses `367624 bytes (37%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes.
+Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes. -->
 
 **Micro_op_resolver**
 Sketch uses `169328 bytes (17%)` of program storage space. Maximum is 983040 bytes.
@@ -74,10 +74,10 @@ Min inference time     : `2697 microseconds`
 ========================================================================================================================
 **Dense Model Deployment STM Nucleo L432KC**
 
-**All ops resolver**
+<!-- **All ops resolver**
 Sketch uses `207052 bytes (78%)` of program storage space. Maximum is 262144 bytes.
 Global variables use `22892 bytes (34%)` of dynamic memory, leaving 42644 bytes for local variables. Maximum is 65536 bytes.
-R
+R -->
 
 **Micro_op_resolver**
 Sketch uses `77692 bytes (29%)` of program storage space. Maximum is 262144 bytes.
@@ -108,10 +108,10 @@ Min inference time     : `2214 microseconds`
 
 ======================================================================================================================
 **Dense Model Deployment Seeduino Xiao**
-
+<!-- 
 **All ops resolver**
 Sketch uses `232372 bytes (88%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
+## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT -->
 
 **Micro_op_resolver**
 Sketch uses `98028 bytes (37%)` of program storage space. Maximum is 262144 bytes.
@@ -126,9 +126,9 @@ Min inference time     : `32154 microseconds`
 
 **Dense Model `Optimized` Deployment Seeduino Xiao**
 
-**All ops resolver**
+<!-- **All ops resolver**
 Sketch uses `220452 bytes (84%)` of program storage space. Maximum is 262144 bytes.
-## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
+## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT -->
 
 **Micro_op_resolver**
 Sketch uses `86116 bytes (32%)` of program storage space. Maximum is 262144 bytes.

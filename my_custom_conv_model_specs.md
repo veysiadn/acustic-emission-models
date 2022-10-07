@@ -120,7 +120,7 @@ Sketch uses `113788 bytes (43%)` of program storage space. Maximum is 262144 byt
 ## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
 
 tensor_arena_size = `13444 bytes`
-Average inference time : `185580.59 microseconds` (10 samples)
+Average inference time : `185580.59 microseconds` (1000 samples)
 STD of inference time  : `3.70 microseconds`
 Max inference time     : `185604 microseconds`
 Min inference time     : `185573 microseconds`

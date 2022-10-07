@@ -57,8 +57,12 @@ Optimized : 62736 Bytes
 **Modified Paper Conv Model to 2D Deployment Arduino Nano BLE 33**
 
 **All ops resolver**
-Sketch uses 581648 bytes (59%) of program storage space. Maximum is 983040 bytes.
-Global variables use 213432 bytes (81%) of dynamic memory, leaving 48712 bytes for local variables. Maximum is 262144 bytes.
+<!-- Sketch uses `581648 bytes (59%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `213432 bytes (81%)` of dynamic memory, leaving 48712 bytes for local variables. Maximum is 262144 bytes. -->
+
+**Micro ops resolver**
+Sketch uses `390432 bytes (39%) `of program storage space. Maximum is 983040 bytes.
+Global variables use `203960 bytes (77%)` of dynamic memory, leaving 58184 bytes for local variables. Maximum is 262144 bytes.
 
 tensor_arena_size = `145932 bytes`
 Average inference time : `1130094.37 microseconds`
@@ -69,11 +73,16 @@ Min inference time     : `1130053 microseconds`
 ========================================================================================================================
 **Modified Paper Conv Model to 2D `Optimized` deployment Arduino Nano BLE 33**
 
-**All ops resolver**
+<!-- **All ops resolver**
 Sketch uses `424464 bytes (43%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `99768 bytes (38%)` of dynamic memory, leaving 162376 bytes for local variables. Maximum is 262144 bytes.
+Global variables use `99768 bytes (38%)` of dynamic memory, leaving 162376 bytes for local variables. Maximum is 262144 bytes. -->
 ### REMARK: 
 #### Optimized model improved inference time by ~2 times.
+
+**Micro ops resolver**
+Sketch uses `236864 bytes (24%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `95504 bytes (36%) `of dynamic memory, leaving 166640 bytes for local variables. Maximum is 262144 bytes.
+
 tensor_arena_size = `38732 bytes`
 Average inference time : `626224.00 microseconds`
 STD of inference time  : `129.70 microseconds`
@@ -154,8 +163,8 @@ Min inference time     : `3235901 microseconds`
 
 **Modified Paper Conv Model to 2D `Optimized` Deployment Raspberry Pi Pico**
 
-**All ops resolver**
-UF2 file size `794112 bytes bytes`
+<!-- **All ops resolver**
+UF2 file size `794112 bytes bytes` -->
 
 tensor_arena_size = `38456 bytes`
 Average inference time : `589597.5000 microseconds.`  (1000 samples)
@@ -164,6 +173,7 @@ Max inference time     : `589705 microseconds`
 Min inference time     : `589537 microseconds`
 **Micro_op_resolver**
 UF2 file size `424448 bytes`
+
 **All other specs are same.**
 
 ========================================================================================================================
