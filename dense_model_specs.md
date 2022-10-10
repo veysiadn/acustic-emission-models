@@ -15,23 +15,23 @@ Non-trainable params: 0
 _________________________________________________________________
 
 Training results
-Training Accuracy: 0.9957500100135803
-Training Loss: 0.026185650378465652
+Training Accuracy: 0.9904166460037231
+Training Loss: 0.05160149186849594
 _________________________________________________________________
 
 Evaluation results
-Validation Accuracy: 0.9773333072662354
-Validation Loss: 0.14419926702976227
+Validation Accuracy: 0.984000027179718
+Validation Loss: 0.0769500806927681
 _________________________________________________________________
 
-Unoptimized dense_model TFLite test_accuracy: 0.9686666666666667
-Optimized dense_model TFLite test_accuracy: 0.968
+Unoptimized dense_model TFLite test_accuracy: 0.98
+Optimized dense_model TFLite test_accuracy: 0.9826
 _________________________________________________________________
 
 ===========================
 **TFLite model size:**
 Unoptimized : 18340 Bytes
-Optimized : 7024 Bytes  
+Optimized : 7048 Bytes  
 ===========================
 
 ========================================================================================================================
@@ -41,16 +41,17 @@ Optimized : 7024 Bytes
 <!-- **All ops resolver**
 Sketch uses `379544 bytes (38%)` of program storage space. Maximum is 983040 bytes.
 Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes. -->
+### ELU Activation
 
-**Micro_op_resolver**
-Sketch uses `177472 bytes (18%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `63176 bytes (24%)` of dynamic memory, leaving 198968 bytes for local variables. Maximum is 262144 bytes.
+Sketch uses `171808 bytes (17%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `63496 bytes (24%)` of dynamic memory, leaving 198648 bytes for local variables. Maximum is 262144 bytes.
 
-tensor_arena_size = `8868 bytes`
-Average inference time : `991.57 microseconds` (10k samples)
-STD of inference time  : `18.65 microseconds`
-Max inference time     : `1037 microseconds`
-Min inference time     : `935 microseconds`
+tensor_arena_size = `9012 bytes`  
+Average inference time : `1083.90 microseconds` (10k samples)
+STD of inference time  : `18.31 microseconds`
+Max inference time     : `1163 microseconds`
+Min inference time     : `1069 microseconds`
+
 
 ========================================================================================================================
 **Dense model `Optimized` deployment Arduino Nano BLE 33**
@@ -60,14 +61,15 @@ Sketch uses `367624 bytes (37%)` of program storage space. Maximum is 983040 byt
 Global variables use `68672 bytes (26%)` of dynamic memory, leaving 193472 bytes for local variables. Maximum is 262144 bytes. -->
 
 **Micro_op_resolver**
-Sketch uses `169328 bytes (17%)` of program storage space. Maximum is 983040 bytes.
-Global variables use `60440 bytes (23%)` of dynamic memory, leaving 201704 bytes for local variables. Maximum is 262144 bytes.
+Sketch uses `164312 bytes (16%)` of program storage space. Maximum is 983040 bytes.
+Global variables use `60712 bytes (23%)` of dynamic memory, leaving 201432 bytes for local variables. Maximum is 262144 bytes.
 ### REMARK: Optimized model adds to more layers, namely Quantize and Dequantize layers for that reasons inference time is slowed down by 2.8 times.
-tensor_arena_size = `6040 bytes`
-Average inference time : `2799.92 microseconds` (10k samples)
-STD of inference time  : `22.57 microseconds`
-Max inference time     : `3518 microseconds`
-Min inference time     : `2697 microseconds`
+tensor_arena_size = `6328 bytes`
+Average inference time : `2834.05 microseconds` (10k samples)
+STD of inference time  : `16.35 microseconds`
+Max inference time     : `2866 microseconds`
+Min inference time     : `2796 microseconds`
+
 
 ========================================================================================================================
 
