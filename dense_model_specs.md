@@ -213,22 +213,23 @@ Min inference time     : `3394 microseconds`
 
 **Micro_op_resolver**
 Total sizes:
-Used static DRAM:  ` 30100 bytes ( 150636 remain, 16.7% used)`
-      .data size:  ` 14404 bytes`
-      .bss  size:  ` 15696 bytes`
-Used static IRAM:  ` 43818 bytes (  87254 remain, 33.4% used)`
-      .text size:  ` 42791 bytes`
-   .vectors size:  `  1027 bytes`
-Used Flash size :  `194195 bytes`
-      .text     :  `132995 bytes`
-      .rodata   :  ` 60944 bytes`
-Total image size:  `252417 bytes (.bin may be padded larger)`
+Used static DRAM:   30444 bytes ( 150292 remain, 16.8% used)
+      .data size:   14404 bytes
+      .bss  size:   16040 bytes
+Used static IRAM:   43818 bytes (  87254 remain, 33.4% used)
+      .text size:   42791 bytes
+   .vectors size:    1027 bytes
+Used Flash size :  175463 bytes
+      .text     :  115607 bytes
+      .rodata   :   59600 bytes
+Total image size:  233685 bytes (.bin may be padded larger)
 
-tensor_arena_size = `8858 bytes`
-Average inference time : `398.2749 microseconds.`
-STD of inference time  : `3.1812 microseconds.`
-Max inference time     : `645 microseconds`
-Min inference time     : `397 microseconds`
+
+tensor_arena_size = `8996 bytes`
+Average inference time : `354.8293 microseconds.` (10k samples)
+STD of inference time  : `3.5063 microseconds.`
+Max inference time     : `556 microseconds`
+Min inference time     : `354 microseconds`
 
 ========================================================================================================================
 
@@ -236,21 +237,20 @@ Min inference time     : `397 microseconds`
 
 **Micro_op_resolver**
 Total sizes:
-Used static DRAM:   27428 bytes ( 153308 remain, 15.2% used)
+Used static DRAM:   28268 bytes ( 152468 remain, 15.6% used)
       .data size:   14404 bytes
-      .bss  size:   13024 bytes
+      .bss  size:   13864 bytes
 Used static IRAM:   43818 bytes (  87254 remain, 33.4% used)
       .text size:   42791 bytes
    .vectors size:    1027 bytes
-Used Flash size :  190291 bytes
-      .text     :  139531 bytes
-      .rodata   :   50504 bytes
-Total image size:  248513 bytes (.bin may be padded larger)
+Used Flash size :  171839 bytes
+      .text     :  122183 bytes
+      .rodata   :   49400 bytes
+Total image size:  230061 bytes (.bin may be padded larger)
 
-tensor_arena_size = `6008`
-Average inference time : `1144.2606 microseconds.`
-STD of inference time  : `4.3867 microseconds.`
-Max inference time     : `1218 microseconds`
-Min inference time     : `1142 microseconds`
-
+tensor_arena_size = `6308`
+Average inference time : `1051.6000 microseconds.` (10k samples)
+STD of inference time  : `3.9706 microseconds.`
+Max inference time     : `1126 microseconds`
+Min inference time     : `1050 microseconds`
 ========================================================================================================================
