@@ -30,7 +30,7 @@ _________________________________________________________________
 
 ===========================
 **TFLite model size:**
-Unoptimized : 18340 Bytes
+Unoptimized : 18164 Bytes
 Optimized : 7048 Bytes  
 ===========================
 
@@ -82,29 +82,29 @@ Global variables use `22892 bytes (34%)` of dynamic memory, leaving 42644 bytes 
 R -->
 
 **Micro_op_resolver**
-Sketch uses `77692 bytes (29%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `18308 bytes (27%)` of dynamic memory, leaving 47228 bytes for local variables. Maximum is 65536 bytes.
+Sketch uses `75548 bytes (28%)` of program storage space. Maximum is 262144 bytes.
+Global variables use `18672 bytes (28%)` of dynamic memory, leaving 46864 bytes for local variables. Maximum is 65536 bytes.
 
-
-tensor_arena_size = `8828`
-Average inference time : `1412.28 microseconds` (10k samples)
-STD of inference time  : `0.79 microseconds`
-Max inference time     : `1425 microseconds`
-Min inference time     : `1411 microseconds`
+tensor_arena_size = `8960`
+Average inference time : `1535.30 microseconds`
+STD of inference time  : `1.01 microseconds`
+Max inference time     : `1548 microseconds`
+Min inference time     : `1533 microseconds`
 
 
 ========================================================================================================================
 **Dense Model `Optimized` Deployment STM Nucleo L432KC**
 
 **Micro_op_resolver**
-Sketch uses `68908 bytes (26%)` of program storage space. Maximum is 262144 bytes.
-Global variables use `15548 bytes (23%)` of dynamic memory, leaving 49988 bytes for local variables. Maximum is 65536 bytes.
+Sketch uses `66996 bytes (25%)` of program storage space. Maximum is 262144 bytes.
+Global variables use `15816 bytes (24%)` of dynamic memory, leaving 49720 bytes for local variables. Maximum is 65536 bytes.
 
-tensor_arena_size = `5996`
-Average inference time : `2214.97 microseconds` (10k samples)
-STD of inference time  : `0.72 microseconds`
-Max inference time     : `2238 microseconds`
-Min inference time     : `2214 microseconds`
+
+tensor_arena_size = `6284`
+Average inference time : `2300.81 microseconds` (10k samples)
+STD of inference time  : `1.48 microseconds`
+Max inference time     : `2315 microseconds`
+Min inference time     : `2299 microseconds`
 
 ======================================================================================================================
 
@@ -116,14 +116,15 @@ Sketch uses `232372 bytes (88%)` of program storage space. Maximum is 262144 byt
 ## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT -->
 
 **Micro_op_resolver**
-Sketch uses `98028 bytes (37%)` of program storage space. Maximum is 262144 bytes.
+Sketch uses `96324 bytes (36%)` of program storage space. Maximum is 262144 bytes.
 ## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
 
-tensor_arena_size = `8828`
-Average inference time : `32160.86 microseconds` (10k samples)
-STD of inference time  : `2.08 microseconds`
-Max inference time     : `32172 microseconds`
-Min inference time     : `32154 microseconds`
+tensor_arena_size = `8964 bytes`
+Average inference time : `32438.66 microseconds` (10k samples)
+STD of inference time  : `2.77 microseconds`
+Max inference time     : `32449 microseconds`
+Min inference time     : `32432 microseconds`
+
 ========================================================================================================================
 
 **Dense Model `Optimized` Deployment Seeduino Xiao**
@@ -133,14 +134,15 @@ Sketch uses `220452 bytes (84%)` of program storage space. Maximum is 262144 byt
 ## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT -->
 
 **Micro_op_resolver**
-Sketch uses `86116 bytes (32%)` of program storage space. Maximum is 262144 bytes.
+Sketch uses `87756 bytes (33%)` of program storage space. Maximum is 262144 bytes.
 ## GLOBAL VARIABLE MEMORY USAGE WASN'T SHOWN IN THE COMPILER OUTPUT
 
-tensor_arena_size = `6000`
-Average inference time : `20384.15 microseconds` (10k samples)
-STD of inference time  : `2.72 microseconds`
-Max inference time     : `20392 microseconds`
-Min inference time     : `20378 microseconds`
+tensor_arena_size = `6284`
+Average inference time : `20868.58 microseconds` (10k samples)   
+STD of inference time  : `1.93 microseconds`
+Max inference time     : `20875 microseconds`
+Min inference time     : `20862 microseconds`
+
 
 
 ========================================================================================================================
@@ -149,30 +151,34 @@ Min inference time     : `20378 microseconds`
 **Dense Model Deployment Nucleo F401RE**
 
 **Micro_op_resolver**
-Sketch uses `74548 bytes (14%)` of program storage space. Maximum is 524288 bytes.
-Global variables use `18240 bytes (18%)` of dynamic memory, leaving 80064 bytes for local variables. Maximum is 98304 bytes.
+Sketch uses `71948 bytes (13%)` of program storage space. Maximum is 524288 bytes.
+Global variables use `18588 bytes (18%)` of dynamic memory, leaving 79716 bytes for local variables. Maximum is 98304 bytes.
 
 
-tensor_arena_size = `8816 bytes`
-Average inference time : `1251.34 microseconds` (10k samples)
-STD of inference time  : `0.48 microseconds`
-Max inference time     : `1258 microseconds`
-Min inference time     : `1251 microseconds`
+
+tensor_arena_size = `8964 bytes`
+Average inference time : `1350.44 microseconds` (10k samples)
+STD of inference time  : `0.71 microseconds`
+Max inference time     : `1357 microseconds`
+Min inference time     : `1350 microseconds`
+
 
 ========================================================================================================================
 
 **Dense Model `Optimized` Deployment Nucleo F401RE**
 
 **Micro_op_resolver**
-Sketch uses `65756 bytes (12%)` of program storage space. Maximum is 524288 bytes.
-Global variables use `18312 bytes (18%)` of dynamic memory, leaving 79992 bytes for local variables. Maximum is 98304 bytes.
+Sketch uses `63396 bytes (12%)` of program storage space. Maximum is 524288 bytes.
+Global variables use `16448 bytes (16%)` of dynamic memory, leaving 81856 bytes for local variables. Maximum is 98304 bytes.
 
 
-tensor_arena_size = `6000`
-Average inference time : `2037.93 microseconds` (10k samples)
-STD of inference time  : `0.71 microseconds`
-Max inference time     : `2044 microseconds`
-Min inference time     : `2037 microseconds`
+
+tensor_arena_size = `6284`
+Average inference time : `2106.13 microseconds` (10k samples)
+STD of inference time  : `0.44 microseconds`
+Max inference time     : `2112 microseconds`
+Min inference time     : `2105 microseconds`
+
 
 ========================================================================================================================
 ======================================================================================================================
