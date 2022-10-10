@@ -417,20 +417,18 @@ void setup()
 
 
   #if DENSE_MODEL && !ALL_OPS_RESOLVER
-    static tflite::MicroMutableOpResolver<5> micro_op_resolver;
+    static tflite::MicroMutableOpResolver<4> micro_op_resolver;
     micro_op_resolver.AddReshape();
     micro_op_resolver.AddFullyConnected();
-    micro_op_resolver.AddLogistic();
-    micro_op_resolver.AddMul();
+    micro_op_resolver.AddElu();
     micro_op_resolver.AddSoftmax();
   #endif
   #if DENSE_MODEL_OPTIMIZED
-  static tflite::MicroMutableOpResolver<7> micro_op_resolver;
+  static tflite::MicroMutableOpResolver<6> micro_op_resolver;
   micro_op_resolver.AddQuantize();
   micro_op_resolver.AddReshape();
   micro_op_resolver.AddFullyConnected();
-  micro_op_resolver.AddLogistic();
-  micro_op_resolver.AddMul();
+  micro_op_resolver.AddElu();
   micro_op_resolver.AddDequantize();
   micro_op_resolver.AddSoftmax();
 #endif
