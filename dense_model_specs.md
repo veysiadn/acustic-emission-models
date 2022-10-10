@@ -185,26 +185,32 @@ Min inference time     : `2105 microseconds`
 **Dense Model Deployment Raspberry Pi Pico**
 
 **Micro_op_resolver**
-UF2 file size `274944 bytes`
+Sketch uses `153870 bytes (7%)` of program storage space. Maximum is 2097152 bytes.
+Global variables use `60460 bytes (22%)` of dynamic memory, leaving 209876 bytes for local variables. Maximum is 270336 bytes.
 
-tensor_arena_size = `8680 bytes`
-Average inference time : `7441.3696 microseconds.`
-STD of inference time  : `40.7673 microseconds.`
-Max inference time     : `8631 microseconds`
-Min inference time     : `7351 microseconds`
+
+tensor_arena_size = `8963 bytes`
+Average inference time : `11867.22 microseconds` (10k samples)
+STD of inference time  : `23.05 microseconds`
+Max inference time     : `12225 microseconds`
+Min inference time     : `11799 microseconds`
+
 
 ========================================================================================================================
 
 **Dense Model `Optimized` Deployment Raspberry Pi Pico**
 
 **Micro_op_resolver**
-UF2 file size `265216 bytes bytes`
+Sketch uses `145660 bytes (6%)` of program storage space. Maximum is 2097152 bytes.
+Global variables use `58320 bytes (21%)` of dynamic memory, leaving 212016 bytes for local variables. Maximum is 270336 bytes.
 
-tensor_arena_size = `5848`
-Average inference time : `3491.7595 microseconds.`
-STD of inference time  : `47.7116 microseconds.`
-Max inference time     : `3886 microseconds`
-Min inference time     : `3394 microseconds`
+
+tensor_arena_size = `6295 bytes`
+Average inference time : `7706.75 microseconds`
+STD of inference time  : `18.47 microseconds`
+Max inference time     : `8043 microseconds`
+Min inference time     : `7658 microseconds`
+
 
 ========================================================================================================================
 

@@ -152,6 +152,9 @@ Min inference time     : `364474 microseconds`
 
 **Micro ops resolver**
 UF2 file size `726016 bytes bytes`
+Sketch uses `372485 bytes (17%)` of program storage space. Maximum is 2097152 bytes.
+Global variables use `201032 bytes (74%)` of dynamic memory, leaving 69304 bytes for local variables. Maximum is 270336 bytes.
+
 tensor_arena_size = `146312 bytes`
 Average inference time : `3236171.0000 microseconds.` (100 samples)
 STD of inference time  : `187.8904 microseconds.`
@@ -165,16 +168,16 @@ Min inference time     : `3235901 microseconds`
 
 <!-- **All ops resolver**
 UF2 file size `794112 bytes bytes` -->
+**Micro_op_resolver**
+UF2 file size `424448 bytes`
+Sketch uses `218261 bytes (10%)` of program storage space. Maximum is 2097152 bytes.
+Global variables use `93588 bytes (34%)` of dynamic memory, leaving 176748 bytes for local variables. Maximum is 270336 bytes.
 
 tensor_arena_size = `38456 bytes`
 Average inference time : `589597.5000 microseconds.`  (1000 samples)
 STD of inference time  : `50.8473 microseconds.`
 Max inference time     : `589705 microseconds`
 Min inference time     : `589537 microseconds`
-**Micro_op_resolver**
-UF2 file size `424448 bytes`
-
-**All other specs are same.**
 
 ========================================================================================================================
 

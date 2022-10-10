@@ -167,7 +167,8 @@ Min inference time     : `39305 microseconds`
 **COULDN'T RUN MODEL ON PICO, INVOCATION ERROR OCCURS**  
 `SOLVED THIS ISSUE BY CHANGING strided_slice_cpp file. Adding support to int32`
 **Micro_op_resolver**
-UF2 file size `390656 bytes bytes`
+Sketch uses `204997 bytes (9%)` of program storage space. Maximum is 2097152 bytes.
+Global variables use `124232 bytes (45%)` of dynamic memory, leaving 146104 bytes for local variables. Maximum is 270336 bytes.
 
 tensor_arena_size = `49128 bytes`
 Average inference time : `183083.5000 microseconds.` (1000 samples)
@@ -186,7 +187,8 @@ Min inference time     : `183040 microseconds`
 `SOLVED THIS ISSUE BY CHANGING strided_slice_cpp file. Adding support to int32`
 
 **Micro_op_resolver**
-UF2 file size `332288 bytes bytes`
+Sketch uses `172237 bytes (8%)` of program storage space. Maximum is 2097152 bytes.
+Global variables use `67988 bytes (25%)` of dynamic memory, leaving 202348 bytes for local variables. Maximum is 270336 bytes.
 
 tensor_arena_size = `13288 bytes`
 Average inference time : `53747.3008 microseconds.` (1000 samples)
