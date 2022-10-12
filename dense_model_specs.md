@@ -174,7 +174,7 @@ Global variables use `16448 bytes (16%)` of dynamic memory, leaving 81856 bytes 
 
 
 tensor_arena_size = `6284`
-Average inference time : `2106.13 microseconds` (10k samples)
+Average inference time : `2106.13 microseconds` (1k samples)
 STD of inference time  : `0.44 microseconds`
 Max inference time     : `2112 microseconds`
 Min inference time     : `2105 microseconds`
