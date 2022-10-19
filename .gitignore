@@ -6,3 +6,4 @@ dense_model/
 wandb/
 all-data.mat
 cnnmodel_gradcamcam_ecg_paper.h5
+structured_data_classifier/
