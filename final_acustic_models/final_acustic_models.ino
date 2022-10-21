@@ -555,7 +555,7 @@ void loop()
     Serial.print("STD of inference time  : "); Serial.print(std_inference_time); Serial.println(" microseconds");
     Serial.print("Max inference time     : "); Serial.print(max_inference_time); Serial.println(" microseconds");
     Serial.print("Min inference time     : "); Serial.print(min_inference_time); Serial.println(" microseconds");
-    Serial.print(interpreter->arena_used_bytes(),DEC);
+    Serial.print(interpreter->arena_used_bytes(),DEC);  
     Serial.println(" bytes used.");
     Serial.print("Recognized val_0 = ");
     Serial.println(output->data.f[0],4);

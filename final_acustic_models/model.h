@@ -30,7 +30,7 @@ limitations under the License.
 #define DATA_ALIGN_ATTRIBUTE
 #endif
 
-#define NUM_SAMPLES 10
+#define NUM_SAMPLES 1000
 #define ALL_OPS_RESOLVER 0
 #define DENSE_MODEL 1
 #define DENSE_MODEL_OPTIMIZED 0
