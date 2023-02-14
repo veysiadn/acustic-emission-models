@@ -4,6 +4,6 @@ authors:
   - family-names: ADIN
     given-names: Veysi
     orcid: https://orcid.org/0000-0002-8250-5066
-title: "TinyML Model for Damage Classification in Concrete Using AE Signals"
+title: "Tiny Machine Learning for Damage Classification in Concrete Using Acoustic Emission Signals"
 version: 0.9.2
 date-released: 2022-11-11
